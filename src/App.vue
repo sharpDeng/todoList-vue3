@@ -80,8 +80,6 @@ export default {
       todoData.visibility = vi
     }
 
-
-
     return { 
       ...toRefs(todoData),
       todoList,
@@ -89,13 +87,13 @@ export default {
       addTodo,
       removeTodo,
       changeHandle,
-      removeAll
+      removeAll: userRemoveAll
     }
     
   }
 }
 
-function removeAll(todoList){
+function userRemoveAll(todoList){
   console.log(todoList)
   todoList.splice(0)
 }
